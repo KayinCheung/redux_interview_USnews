@@ -1,0 +1,35 @@
+$header-bg: #3b3a62;
+
+.App {
+  text-align: center;
+}
+
+
+.paddedBox{
+  padding: 10px;
+}
+
+.clickableBox:hover{
+  cursor: pointer;
+}
+
+.noMargin{
+  margin:0;
+  padding:0;
+}
+.headerBg{
+  background-color: $header-bg; 
+}
+
+.circle {
+  background: #bdbdbd;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+}
+
+.clickableIcon{
+  pointer-events: initial;
+}
