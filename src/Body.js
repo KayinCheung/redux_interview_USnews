@@ -33,11 +33,11 @@ class Body extends Component {
 
   return (  
       <div className="container is-centered body" id="checkBody">
-
+        
         <Card/>
         <br/>
 
-        {this.props.error === true ? <p className="has-text-danger">Error loading more articles. Please refresh and try again.</p> : null}
+        {this.props.error === true ? <p className="has-text-danger">Loading unsucessful. Please refresh and try again.</p> : null}
 
         {this.props.totalResults === 0 ? <p>No results for the search term: <b>{this.props.search}</b></p> : null}
 

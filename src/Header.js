@@ -11,6 +11,7 @@ function Header() {
       US News
       </h1>
       
+      
     </div>
     <div className="navbar-menu is-active headerBg">
     <div className="navbar-end">
