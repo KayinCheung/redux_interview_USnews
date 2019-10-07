@@ -1,6 +1,7 @@
  
 import constant from '../Constant'
-import { LOADING_API, NEW_FETCH_API, FETCH_API_PAGINATION, API_ERROR, CLEAR_DATA } from './types'
+import { LOADING_API, NEW_FETCH_API, FETCH_API_PAGINATION, API_ERROR, CLEAR_DATA, LOAD_FROM_STORE } from './types'
+import { loadFromLocalStorage } from '../store'
 
 export const fetchAPI = (search = '', page = 1 ) => dispatch =>{
 
@@ -54,5 +55,19 @@ export const fetchAPI = (search = '', page = 1 ) => dispatch =>{
                 loading: false
             })
         }
-    }) 
+    }).catch( err => {
+        //Error from server, load from local storage
+
+        console.log(err)
+        
+        let savedData = loadFromLocalStorage()
+        dispatch({
+            type: LOAD_FROM_STORE,
+            payload: savedData.fetch.data,
+            search: savedData.fetch.search,
+            page: savedData.fetch.page,
+            loading: false,
+            error: true
+        })
+      })
 }

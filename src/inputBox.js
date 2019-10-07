@@ -4,9 +4,10 @@ import { fetchAPI } from './actions/fetchActions'
 
 class InputBox extends Component {
     render() {
+
       return (
-        <div className="control has-icons-left has-icons-right">
-        <input className="input is-fullwidth" type="text" placeholder="Search" id="searchBox"
+        <div className="control has-icons-left has-icons-right is-flex">
+        <input className="input" type="text" placeholder="Search" id="searchBox"
         onKeyPress={(e) => {
 
           //Search on enter press

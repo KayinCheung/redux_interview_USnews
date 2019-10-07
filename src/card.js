@@ -6,14 +6,16 @@ import { connect } from 'react-redux'
 class Card extends Component {
     render() {
 
-      if (Object.keys(this.props.data).length === 0) return (null)
-      let data = this.props.data
+      let data = this.props.data || []
 
+      let minWidth = 400;
+      if (window.innerWidth < minWidth) minWidth = window.innerWidth
+      
       return (
-        <div className="container columns is-multiline">
+        <div className="container columns is-multiline is-marginless is-paddingless is-centered">
              {data.map((row, i) => (
                 <div className='column is-one-third is-flex clickableBox' 
-                    style={{minWidth:400}} key={`${i}-${row["title"]}`}>
+                    style={{minWidth:minWidth}} key={`${i}-${row["title"]}`}>
                 <div className="card" key={row["title"]} 
                     onClick={() => window.open(row["url"])}>
                 <div className="paddedBox">
@@ -41,6 +43,7 @@ class Card extends Component {
                     <p className="title is-5">{row["title"]}</p>
                     <div className="content is-size-7">
                         {row["description"]}    
+
                     <br/>
                     </div>
                     </div>

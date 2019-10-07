@@ -1,4 +1,4 @@
-import { FETCH_API_PAGINATION, NEW_FETCH_API, API_ERROR, CLEAR_DATA, LOADING_API } from '../actions/types'
+import { FETCH_API_PAGINATION, NEW_FETCH_API, API_ERROR, CLEAR_DATA, LOADING_API, LOAD_FROM_STORE } from '../actions/types'
 
 const initialState = {
     data: [],
@@ -47,6 +47,16 @@ export default function(state = initialState, action){
                 totalResults: action.payload.totalResults
             }
 
+        case LOAD_FROM_STORE:
+        return{
+            ...state,
+            data: action.payload,
+            loading: false,
+            page: action.page,
+            search: action.search,
+            error: true,
+            totalResults: action.payload.totalResults
+        }
         case LOADING_API:
         return{
             ...state,

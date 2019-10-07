@@ -7,30 +7,28 @@ function Header() {
 
   return (
 
-    <nav className="navbar is-transparent is-fixed-top headerBg">
-  <div className="navbar-brand">
-    <p className="navbar-item has-text-white">
-     US News
-    </p>
-    <div className="navbar-burger burger" data-target="navbarExampleTransparentExample">
-      <span></span>
-      <span></span>
-      <span></span>
+    <nav className="navbar is-transparent is-fixed-top headerBg level">
+    <div className="navbar-brand">
+      <h1 className="navbar-item has-text-white">
+      US News
+      </h1>
+      
     </div>
-  </div>
-
-  <div id="navbarExampleTransparentExample" className="navbar-menu">
-    
+    <div className="navbar-menu is-active headerBg">
     <div className="navbar-end">
       <div className="navbar-item">
-      <InputBox/>
-      
+        <InputBox/>
       </div>
     </div>
-  </div>
-</nav>
+    </div>
+   
+   </nav>
+   
 
   );
 }
 
 export default Header;
+
+/*
+*/
