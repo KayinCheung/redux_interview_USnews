@@ -1,6 +1,4 @@
 import React from 'react';
-
-import './App.scss';
 import InputBox from './inputBox'
 
 function Header() {
@@ -8,7 +6,7 @@ function Header() {
   return (
 
     <nav className="navbar is-transparent is-fixed-top headerBg level">
-    <div className="navbar-brand">
+    <div className="navbar-brand headerBg">
       <h1 className="navbar-item has-text-white">
       US News
       </h1>

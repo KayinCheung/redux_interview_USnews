@@ -1,6 +1,7 @@
 import React from 'react';
-
 import './App.scss';
+import 'bulma'
+
 import Header from './Header.js'
 import Body from './Body.js'
 

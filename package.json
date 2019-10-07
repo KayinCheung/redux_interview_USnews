@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.7.5",
+    "font-awesome": "^4.7.0",
     "json-loader": "^0.5.7",
     "lodash": "^4.17.15",
     "lodash.debounce": "^4.0.8",

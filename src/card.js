@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import constant from './Constant.js'
 import { offsetDateTime } from './util'
 import { connect } from 'react-redux'
+import images from './images'
 
 class Card extends Component {
     render() {
@@ -34,8 +34,7 @@ class Card extends Component {
                 </div>
                     <div className="card-image">
                     <figure className="image">
-                        <img src={(row["urlToImage"] === "" || row["urlToImage"] === null) ? 
-                            constant.backupImg[row["source"]["name"]] : row["urlToImage"]} alt="cardimg"/>
+                        <img src={(row["urlToImage"] || images[row["source"]["name"]])} alt="cardimg"/>
                     </figure>
                     </div>
 

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-
-import './App.scss';
 import Card from './card'
 
 import { connect } from 'react-redux'
 import { fetchAPI } from './actions/fetchActions'
+
 
 class Body extends Component {
 

@@ -47,7 +47,7 @@ store.subscribe(() => {
     }
     try{
         if (state.fetch["data"].length >= 1){
-            saveToLocalStorage(store.getState())
+            saveToLocalStorage(state)
         }
     } catch(e){
         console.log(e)
